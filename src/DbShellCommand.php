@@ -66,7 +66,6 @@ class DbShellCommand extends Command {
 		}
 
 		$command = implode(' ', $args);
-		$this->info("running command: $command");
 		$proc = proc_open($command, array(STDIN, STDOUT, STDERR), $pipes);
 
 		if ($proc === false) {
