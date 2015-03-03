@@ -1,0 +1,19 @@
+{
+	"name": "tremby/laravel-db-shell-command",
+	"description": "Add a db:shell command to Laravel which runs a shell for a configured database connection",
+	"require": {
+		"laravel/framework": "~4.1"
+	},
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Bart Nagel",
+			"email": "bart@tremby.net"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Tremby\\DbShellCommand\\": "src/"
+		}
+	}
+}
