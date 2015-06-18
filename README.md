@@ -10,7 +10,7 @@ Laravel version
 ---------------
 
 This branch and the `v2.*` line of tags are for Laravel 5. For the Laravel 4
-version [see the laravel4 branch][l4] and the `v1.x` line of tags.
+version [see the laravel4 branch][l4] and the `v1.*` line of tags.
 
 [l4]: https://github.com/tremby/laravel-db-shell-command/tree/laravel4
 
