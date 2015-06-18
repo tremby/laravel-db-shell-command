@@ -49,7 +49,7 @@ class DbShellCommand extends Command
 
         switch ($config['driver']) {
             case 'mysql':
-                $args = array('mysql');
+                $args = ['mysql'];
                 array_push($args, '-h', $c['host']);
                 if (isset($config['port'])) {
                     array_push($args, '-P', $c['port']);
@@ -66,7 +66,7 @@ class DbShellCommand extends Command
         }
 
         $command = implode(' ', $args);
-        $proc = proc_open($command, array(STDIN, STDOUT, STDERR), $pipes);
+        $proc = proc_open($command, [STDIN, STDOUT, STDERR], $pipes);
 
         if ($proc === false) {
             $this->error("Failed to open process");
@@ -83,7 +83,7 @@ class DbShellCommand extends Command
      */
     protected function getArguments()
     {
-        return array();
+        return [];
     }
 
     /**
@@ -93,14 +93,14 @@ class DbShellCommand extends Command
      */
     protected function getOptions()
     {
-        return array(
-            array(
+        return [
+            [
                 "connection", 'c',
                 InputOption::VALUE_REQUIRED,
                 "The identifier of the connection to use; a key of your "
                 . "'database.connections' configuration array.",
                 \Config::get('database.default'),
-            ),
-        );
+            ],
+        ];
     }
 }
