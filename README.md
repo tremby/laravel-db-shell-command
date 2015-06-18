@@ -6,6 +6,14 @@ configured database connection.
 
 Binaries for the various database shells are expected to be in your path.
 
+Laravel version
+---------------
+
+This branch and the `v2.*` line of tags are for Laravel 5. For the Laravel 4
+version [see the laravel4 branch][l4] and the `v1.x` line of tags.
+
+[l4]: https://github.com/tremby/laravel-db-shell-command/tree/laravel4
+
 Installation
 ------------
 
@@ -13,9 +21,12 @@ Require it in your Laravel project:
 
     composer require tremby/laravel-db-shell-command
 
-Add a line to your `app/start/artisan.php` file to register the command:
+Add a line to your `app/Console/Kernel.php` file to register the command:
 
-    Artisan::add(new Tremby\DbShellCommand\DbShellCommand);
+    protected $commands = [
+        ...
+        \Tremby\DbShellCommand\DbShellCommand::class,
+    ];
 
 Use
 ---
