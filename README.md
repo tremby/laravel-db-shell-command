@@ -21,12 +21,12 @@ Require it in your Laravel project:
 
     composer require tremby/laravel-db-shell-command
 
-Add a line to your `app/Console/Kernel.php` file to register the command:
+Register the service provider in your `config/app.php` file:
 
-    protected $commands = [
+    'providers' => [
         ...
-        \Tremby\DbShellCommand\DbShellCommand::class,
-    ];
+        \Tremby\DbShellCommand\ServiceProvider::class,
+    ],
 
 Use
 ---

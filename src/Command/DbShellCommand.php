@@ -1,5 +1,5 @@
 <?php
-namespace Tremby\DbShellCommand;
+namespace Tremby\DbShellCommand\Command;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
