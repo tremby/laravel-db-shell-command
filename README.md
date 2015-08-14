@@ -25,7 +25,7 @@ Register the service provider in your `config/app.php` file:
 
     'providers' => [
         ...
-        \Tremby\DbShellCommand\ServiceProvider::class,
+        Tremby\DbShellCommand\ServiceProvider::class,
     ],
 
 Use
